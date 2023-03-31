@@ -1,6 +1,6 @@
 from google.cloud import bigquery, storage
 
-def get_tag_file(client):
+def get_table(client):
     if tenant_id:
         sql = f"""
               YOUR SQL
@@ -13,4 +13,4 @@ if __name__ == "__main__":
     storage_client = storage.Client()
     client = bigquery.Client()
     
-    df = get_tag_file(client)
+    df = get_table(client)
