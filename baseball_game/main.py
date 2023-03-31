@@ -30,7 +30,10 @@ def baseball_play():
     B = 0
 
     input_value = input('입력값 : ')
+    input_value = re.sub('[^0-9]', '', input_value)
     try:
+      if len(input_value) != 3:
+        raise
       if input_value == check:
         print(f'clear : {n}번만에 정답을 맞추셨습니다!')
         break
